@@ -1,1 +1,1 @@
-<template>Component from remote app</template>
+<template>I am a component from remote app</template>
