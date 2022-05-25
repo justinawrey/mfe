@@ -7,17 +7,16 @@ async function handleRequest(request) {
 
   // Serve shell apps
   if (pathname === "/shell") {
-    return await serveFile(request, "./shell/dist/index.html");
+    return serveFile(request, "./shell/dist/index.html");
   }
 
   // Serve MFE assets and future versioning (better with glob)
   if (pathname.startsWith("/cdn/shell")) {
-    return await serveFile(request, join("./shell/dist", basename(pathname)));
+    return serveFile(request, join("./shell/dist", basename(pathname)));
   }
 
   if (pathname.startsWith("/cdn/remote")) {
-    console.log("constructed path", join("./remote/dist", basename(pathname)));
-    return await serveFile(request, join("./remote/dist", basename(pathname)));
+    return serveFile(request, join("./remote/dist", basename(pathname)));
   }
 }
 
