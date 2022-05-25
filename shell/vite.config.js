@@ -9,7 +9,8 @@ export default defineConfig({
       name: "shell",
       filename: "remoteEntry.js",
       remotes: {
-        remote: "http://localhost:3001/assets/remoteEntry.js",
+        remote:
+          "https://justinawrey-mfe-v2nh1d9x2kn0.deno.dev/cdn/remote@latest",
       },
       shared: ["vue"],
     }),
