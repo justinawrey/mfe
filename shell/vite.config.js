@@ -11,7 +11,7 @@ export default defineConfig({
       name,
       filename: "remoteEntry.js",
       remotes: {
-        remote: "http://justinawrey-mfe.deno.dev/cdn/remote/remoteEntry.js",
+        remote: "http://microfrontends.deno.dev/cdn/remote/remoteEntry.js",
       },
       shared: ["vue"],
     }),
