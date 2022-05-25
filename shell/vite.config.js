@@ -9,12 +9,14 @@ export default defineConfig({
       name: "shell",
       filename: "remoteEntry.js",
       remotes: {
-        remote: "https://justinawrey-mfe.deno.dev/cdn/remote@latest",
+        remote: "http://localhost:8000/cdn/remote/remoteEntry.js",
       },
       shared: ["vue"],
     }),
   ],
   build: {
     target: "esnext",
+    assetsDir: "",
   },
+  base: "/cdn/shell/",
 });

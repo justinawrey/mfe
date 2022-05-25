@@ -16,5 +16,7 @@ export default defineConfig({
   ],
   build: {
     target: "esnext",
+    assetsDir: "",
   },
+  base: "/cdn/remote/",
 });
