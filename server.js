@@ -16,12 +16,14 @@ async function handleRequest(request) {
   if (pathname.startsWith("/cdn/shell")) {
     return serveDir(request, {
       fsRoot: "shell/dist",
+      urlRoot: "cdn/shell",
     });
   }
 
   if (pathname.startsWith("/cdn/remote")) {
     return serveDir(request, {
       fsRoot: "remote/dist",
+      urlRoot: "cdn/shell",
     });
   }
 
