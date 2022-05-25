@@ -20,12 +20,12 @@ async function serveJs(path) {
 async function handleRequest(request) {
   const { pathname } = new URL(request.url);
 
-  // Serve shell apps (better with glob)
+  // Serve shell apps
   if (pathname === "/shell") {
     return serveHtml("./shell/dist/index.html");
   }
 
-  // Serve MFE assets (better with glob)
+  // Serve MFE assets and future versioning (better with glob)
   if (pathname.startsWith("/cdn/shell")) {
     return serveJs(join("./shell/dist", basename(pathname)));
   }
