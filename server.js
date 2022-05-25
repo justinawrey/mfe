@@ -23,7 +23,7 @@ async function handleRequest(request) {
   if (pathname.startsWith("/cdn/remote")) {
     return serveDir(request, {
       fsRoot: "remote/dist",
-      urlRoot: "cdn/shell",
+      urlRoot: "cdn/remote",
     });
   }
 
