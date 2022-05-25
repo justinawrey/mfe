@@ -16,6 +16,7 @@ async function handleRequest(request) {
   }
 
   if (pathname.startsWith("/cdn/remote")) {
+    console.log("constructed path", join("./remote/dist", basename(pathname)));
     return serveFile(request, join("./remote/dist", basename(pathname)));
   }
 }
